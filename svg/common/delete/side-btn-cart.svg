@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.9" height="22" viewBox="0 0 29.9 22">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 1.8px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="グループ_45" data-name="グループ 45" transform="translate(0)">
+    <g id="パス_1" data-name="パス 1" class="cls-1" transform="translate(-237.016 -415.023)">
+      <path class="cls-4" d="M257.178,429.736H238.65l-1.635-14.713h21.8Z"/>
+      <path class="cls-5" d="M 255.5665588378906 427.9363708496094 L 256.8013305664063 416.8235168457031 L 239.026611328125 416.8235168457031 L 240.2613830566406 427.9363708496094 L 255.5665588378906 427.9363708496094 M 257.1776428222656 429.7363586425781 L 238.6502990722656 429.7363586425781 L 237.0155334472656 415.0234985351563 L 258.8124084472656 415.0234985351563 L 257.1776428222656 429.7363586425781 Z"/>
+    </g>
+    <path id="パス_2" data-name="パス 2" class="cls-2" d="M249.2,437.727H268.5l1.7-16.184h5.663" transform="translate(-246.861 -420.29)"/>
+    <ellipse id="楕円形_1" data-name="楕円形 1" class="cls-3" cx="2.177" cy="2.177" rx="2.177" ry="2.177" transform="translate(3.995 17.646)"/>
+    <ellipse id="楕円形_2" data-name="楕円形 2" class="cls-3" cx="2.177" cy="2.177" rx="2.177" ry="2.177" transform="translate(14.244 17.646)"/>
+  </g>
+</svg>

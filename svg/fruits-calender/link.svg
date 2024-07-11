@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.7" height="18.389" viewBox="0 0 16.7 18.389">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #4f596f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-share-2" data-name="Icon feather-share-2" transform="translate(0.75 0.75)">
+    <path id="パス_6925" data-name="パス 6925" class="cls-1" d="M27.567,5.533A2.533,2.533,0,1,1,25.033,3a2.533,2.533,0,0,1,2.533,2.533Z" transform="translate(-12.367 -3)"/>
+    <path id="パス_6926" data-name="パス 6926" class="cls-1" d="M9.567,16.033A2.533,2.533,0,1,1,7.033,13.5,2.533,2.533,0,0,1,9.567,16.033Z" transform="translate(-4.5 -7.589)"/>
+    <path id="パス_6927" data-name="パス 6927" class="cls-1" d="M27.567,26.533A2.533,2.533,0,1,1,25.033,24,2.533,2.533,0,0,1,27.567,26.533Z" transform="translate(-12.367 -12.178)"/>
+    <path id="パス_6928" data-name="パス 6928" class="cls-1" d="M12.885,20.265l5.767,3.361" transform="translate(-8.165 -10.546)"/>
+    <path id="パス_6929" data-name="パス 6929" class="cls-1" d="M18.644,9.765l-5.759,3.361" transform="translate(-8.165 -5.957)"/>
+  </g>
+</svg>

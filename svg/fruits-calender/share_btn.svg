@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a2a9b1;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="グループ_867" data-name="グループ 867" transform="translate(-242 -537)">
+    <circle id="楕円形_139" data-name="楕円形 139" class="cls-1" cx="24" cy="24" r="24" transform="translate(242 537)"/>
+    <g id="Icon_feather-share-2" data-name="Icon feather-share-2" transform="translate(258 552)">
+      <path id="パス_6925" data-name="パス 6925" class="cls-2" d="M28.14,5.82A2.82,2.82,0,1,1,25.32,3a2.82,2.82,0,0,1,2.82,2.82Z" transform="translate(-11.219 -3)"/>
+      <path id="パス_6926" data-name="パス 6926" class="cls-2" d="M10.14,16.32A2.82,2.82,0,1,1,7.32,13.5,2.82,2.82,0,0,1,10.14,16.32Z" transform="translate(-4.5 -6.92)"/>
+      <path id="パス_6927" data-name="パス 6927" class="cls-2" d="M28.14,26.82A2.82,2.82,0,1,1,25.32,24,2.82,2.82,0,0,1,28.14,26.82Z" transform="translate(-11.219 -10.839)"/>
+      <path id="パス_6928" data-name="パス 6928" class="cls-2" d="M12.885,20.265l6.421,3.741" transform="translate(-7.63 -9.445)"/>
+      <path id="パス_6929" data-name="パス 6929" class="cls-2" d="M19.3,9.765l-6.411,3.741" transform="translate(-7.63 -5.525)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="145" viewBox="0 0 129 145">
+  <defs>
+    <style>
+      .back {
+        fill: #4D5971;
+      }
+    </style>
+  </defs>
+  <path id="said-btn" data-name="online-btn" class="back" d="M46.766,130.032C20.2,119.11,0,94.091,0,64.59a64.5,64.5,0,1,1,129,0c0,29.362-25.309,54.077-46.7,65.017a17.989,17.989,0,0,1-35.534.425Z"/>
+</svg>

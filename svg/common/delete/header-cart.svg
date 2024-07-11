@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.9" height="18" viewBox="0 0 24.9 18">
+  <g id="cart" transform="translate(0)">
+    <g id="パス_1" data-name="パス 1" transform="translate(-237.015 -415.023)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M253.578,427.109H238.358l-1.343-12.086h17.9Z" stroke="none"/>
+      <path d="M 251.9665679931641 425.3094482421875 L 252.909423828125 416.823486328125 L 239.026611328125 416.823486328125 L 239.9694976806641 425.3094482421875 L 251.9665679931641 425.3094482421875 M 253.5776519775391 427.1094360351563 L 238.3584136962891 427.1094360351563 L 237.0155334472656 415.0234985351563 L 254.9205017089844 415.0234985351563 L 253.5776519775391 427.1094360351563 Z" stroke="none" fill="#4d5971"/>
+    </g>
+    <path id="パス_2" data-name="パス 2" d="M249.2,434.838H265.18l1.41-13.294h4.69" transform="translate(-247.28 -420.514)" fill="none" stroke="#4d5971" stroke-linecap="round" stroke-width="1.8"/>
+    <ellipse id="楕円形_1" data-name="楕円形 1" cx="1.788" cy="1.788" rx="1.788" ry="1.788" transform="translate(3.282 14.424)" fill="#4d5971"/>
+    <ellipse id="楕円形_2" data-name="楕円形 2" cx="1.788" cy="1.788" rx="1.788" ry="1.788" transform="translate(11.804 14.424)" fill="#4d5971"/>
+  </g>
+</svg>

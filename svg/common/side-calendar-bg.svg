@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a2a9b1;
+        mix-blend-mode: multiply;
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #cbab7b;
+      }
+
+      .cls-3 {
+        fill: #f7f7f7;
+      }
+
+      .cls-4 {
+        fill: #4d5971;
+      }
+    </style>
+  </defs>
+  <g id="グループ_162" data-name="グループ 162" transform="translate(0 0)">
+    <g id="グループ_163" data-name="グループ 163">
+      <rect id="長方形_281" data-name="長方形 281" class="cls-1" width="111" height="101" rx="1.478" transform="translate(5 15)"/>
+      <path id="長方形_282" data-name="長方形 282" class="cls-2" d="M1.478,0H109.522A1.478,1.478,0,0,1,111,1.478V19a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.478A1.478,1.478,0,0,1,1.478,0Z" transform="translate(0 10)"/>
+      <path id="長方形_283" data-name="長方形 283" class="cls-3" d="M0,0H111a0,0,0,0,1,0,0V79.522A1.478,1.478,0,0,1,109.522,81H1.478A1.478,1.478,0,0,1,0,79.522V0A0,0,0,0,1,0,0Z" transform="translate(0 29)"/>
+      <path id="パス_6380" data-name="パス 6380" class="cls-4" d="M3735.325,2741.672a2.755,2.755,0,0,1-3-2.415v-14.171a3.071,3.071,0,0,1,6,0v14.171A2.755,2.755,0,0,1,3735.325,2741.672Z" transform="translate(-3651.325 -2722.672)"/>
+      <path id="パス_6381" data-name="パス 6381" class="cls-4" d="M3735.325,2741.672a2.755,2.755,0,0,1-3-2.415v-14.171a3.071,3.071,0,0,1,6,0v14.171A2.755,2.755,0,0,1,3735.325,2741.672Z" transform="translate(-3708.325 -2722.672)"/>
+    </g>
+  </g>
+</svg>
