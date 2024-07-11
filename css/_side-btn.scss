@@ -1,0 +1,138 @@
+.side-link{
+  position: fixed;
+  z-index: 10;
+  right: 32px;
+  top: 50%;
+  @include flex(center,center,0,0,1);
+  @include sm{
+    right: 8px;
+  }
+  @include sp{
+    width: 100%;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    @include flex(between,center);
+    flex-direction: row-reverse;
+  }
+  &__online{
+    @include sp{
+      max-width: 50%;
+      width: 100%;
+      height: 42px;
+      background: $color4;
+      @include flex(center,center);
+    }
+    .link-btn{
+      .onlinebtn{
+        width: 130px;
+        height: 145px;
+        @include svg-back;
+        transition: 0.5s;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include flex(center,center,0,0,1);
+        @include sm{
+          width: 90px;
+          height: 102px;
+        }
+        @include sp{
+          width: 100%;
+          height: auto;
+          background: none;
+          @include flex(center,center);
+          flex-direction: row;
+        }
+        &__img{
+          padding-bottom: 10px;
+          @include sm{
+            padding-bottom: 5px;
+          }
+          @include sp{
+            display: none;
+          }
+        }
+        &__text{
+          @extend .sab-title;
+          font-size: 1.6rem;
+          letter-spacing: 0.04em;
+          line-height: 1.2em;
+          text-align: center;
+          color: $color2;
+          @include sm{
+            font-size: 1.2rem;
+          }
+          br{
+            @include sp{
+              display: none;
+            }
+          }
+        }
+      }
+      &:hover{
+        .onlinebtn{
+          @include svg-back-hover;
+          transition: 0.5s;
+          @include sp{
+            background: $color1;
+          }
+        }
+      }
+    }
+  }
+  &__calendar{
+    @include sp{
+      width: 100%;
+      height: 42px;
+        background: $color3;
+        @include flex(center,center);
+    }
+    .link-btn{
+      width: 100%;
+      .calendarbtn{
+        width: 116px;
+        height: 116px;
+        background-image: url(../svg/common/side-calendar-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include flex(center,center,0,0,1);
+        margin-top: 24px;
+        padding-top: 24px;
+        @include sm{
+          width: 96px;
+          height: 96px;
+          margin-top: 16px;
+        }
+        @include sp{
+          width: 100%;
+          height: auto;
+          padding: 0;
+          margin: 0;
+          background: none;
+              flex-direction: row;
+        }
+        &__text{
+          @extend .sab-title;
+          font-size: 1.6rem;
+          letter-spacing: 0.04em;
+          line-height: 1.2em;
+          text-align: center;
+          padding-top: 5px;
+          color: $color1;
+          @include sm{
+            font-size: 1.2rem;
+          }
+          @include sp{
+            padding: 0;
+            color: $color2;
+          }
+          br{
+            @include sp{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

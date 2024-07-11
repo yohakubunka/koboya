@@ -1,0 +1,313 @@
+main#technology{
+  .section{
+    &-inner{
+      .award{
+        width: 100%;
+        @include flex(between,center);
+        max-width: calc(100% - 32px);
+        margin: 0 auto;
+        @include lg{
+          max-width: 100%;
+        }
+        &::before{
+          content: "";
+          width: 80px;
+          height: 148px;
+          display: block;
+          background-image: url(../svg/about/wing-left.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include sm{
+            display: none;
+          }
+        }
+        &::after{
+          content: "";
+          width: 80px;
+          height: 148px;
+          display: block;
+          background-image: url(../svg/about/wing-right.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include sm{
+            display: none;
+          }
+        }
+        &-box{
+          width: 100%;
+          margin: 0 8px auto;
+          @include sm{
+            margin: 0;
+          }
+          &__title{
+            font-size: 3.4rem;
+            color: $color5;
+            letter-spacing: 0.04em;
+            @extend .sab-title;
+            text-align: center;
+            position: relative;
+            @include flex(center,center);
+            @include lg{
+              width: 500px;
+              margin: 0 auto;
+              @include flex(center,start);
+            }
+            @include sm{
+              max-width: calc(100% - 24px);
+              margin: 0 auto;
+              width: 100%;
+              font-size: 2.8rem;
+              &::before{
+                content: "";
+                width: 80px;
+                height: 96px;
+                display: flex;
+                background-image: url(../svg/about/wing-left.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+              &::after{
+                content: "";
+                width: 80px;
+                height: 96px;
+                display: flex;
+                background-image: url(../svg/about/wing-right.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+            }
+            @include sp{
+              font-size: 2.0rem;
+            }
+            @include xs{
+              font-size: 1.8rem;
+            }
+            span.left{
+              @extend .bot;
+              @include absoluteCenterX;
+              left: 40px;
+              color: $color5;
+              font-size: 3.4rem;
+              @include xl{
+                left: 0;
+              }
+              @include sm{
+                left: 30px;
+              }
+              @include sp{
+                display: none;
+              }
+            }
+            span.right{
+              @extend .bot;
+              @include absoluteCenterX;
+              left: auto;
+              right: 24px;
+              color: $color5;
+              font-size: 3.4rem;
+              @include xl{
+                right: -24px;
+              }
+              @include lg{
+                right: 0;
+              }
+              @include sm{
+                right: 30px;
+              }
+              @include sp{
+                display: none;
+              }
+            }
+          }
+          p{
+            padding-top: 24px;
+            font-size: 2.0rem;
+            line-height: 1.6em;
+            text-align: center;
+            @include sm{
+              font-size: 1.8rem;
+            }
+            @include sp{
+              padding-top: 16px;
+              font-size: 1.4rem;
+            }
+            br{
+              @include lg{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .trigger{
+        @include flex(between,center);
+        @include sm{
+          @include flex(center,center,wrap);
+        }
+        &-text{
+          max-width: calc(50% - 32px);
+          width: 100%;
+          line-height: 2.2em;
+          @include lg{
+            max-width: calc(50% - 16px);
+            line-height: 1.8em;
+          }
+          @include sm{
+            max-width: 100%;
+            padding-right: 56px;
+          }
+          @include sp{
+            padding-right : 0;
+          }
+        }
+        &-img{
+          max-width: calc(50% - 80px);
+          width: 100%;
+          @include lg{
+            max-width: calc(50% - 16px);
+          }
+          @include sm{
+            max-width: 100%;
+            padding-left: 56px;
+            padding-bottom: 40px;
+          }
+          @include sp{
+            padding-left: 0;
+            padding-bottom:24px;
+          }
+        }
+      }
+      .trigger:first-of-type{
+        padding-bottom: 80px;
+        @include sm{
+          padding-bottom: 40px;
+          flex-direction: column-reverse;
+        }
+        @include sp{
+          padding-bottom: 32px;
+        }
+      }
+      .kouka{
+        ul{
+          @include flex(between,center);
+          margin-top: 96px;
+          @include lg{
+            @include flex(between,start);
+          }
+          @include sm{
+            margin: 0 ;
+            @include flex(center,center,0,0,1);
+          }
+          .kouka-pic{
+            position: relative;
+            @include lg{
+              max-width: calc(100% / 3);
+              background: $color2;
+              margin-top: 0;
+              padding-top: 56px;
+            }
+            @include sm{
+              max-width: 100%;
+              width: 100%;
+              padding-top: 0;
+              padding: 24px;
+              @include flex(between,center);
+            }
+            @include sp{
+              padding: 16px;
+              padding-top: 80px;
+              margin: 96px 0 32px 0;
+            }
+            &__img{
+              @include flex(center,center);
+              @include absoluteCenterX;
+              top: -96px;
+              width: 100%;
+              @include sm{
+                width: auto;
+                position: inherit;
+                transform: inherit;
+                top: auto;
+                left: auto;
+                flex-shrink: 0;
+              }
+              @include sp{
+                @include absoluteCenterX;
+                top: -96px;
+                width: 100%;
+              }
+              img{
+                max-width: 188px;
+                width: 100%;
+                height: 188px;
+              }
+            }
+            &__text{
+              background: $color2;
+              max-width: 354px;
+              height: 340px;
+              width: 100%;
+              padding:88px 32px 32px 32px;
+              @include flex(start,center,0,end,1);
+              @include lg{
+                padding: 16px;
+                height: auto;
+                background: none;
+              }
+              @include sm{
+                @include flex(start,start);
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: 0;
+                padding: 0 0 0 24px;
+              }
+              @include sp{
+                display: block;
+                padding: 24px 0 0 0;
+              }
+              h4{
+                padding:24px 0 16px 0;
+                font-size: 2.0rem;
+                @extend .sab-title;
+                text-align: center;
+                @include lg{
+                  font-size: 1.6rem;
+                }
+                @include sm{
+                  padding-top: 0;
+                }
+                @include sp{
+                }
+              }
+              p{
+                font-size: 1.4rem;
+                line-height: 1.7em;
+              }
+            }
+          }
+          .kouka-pic:nth-child(2){
+            margin: 0 8px;
+            @include sm{
+              margin: 40px 0;
+            }
+            @include sp{
+              margin: 96px 0 32px 0;
+            }
+          }
+          .kouka-pic:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+        &-quote{
+          width: 100%;
+          @include flex(end,center);
+          padding-top: 16px;
+          p{
+            line-height: 1em;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

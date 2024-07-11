@@ -1,0 +1,287 @@
+main#farm{
+  .section{
+    &-inner{
+      .farms{
+        &-title{
+          padding-bottom: 72px;
+          @include flex(center,center,0,0,1);
+          @include sm{
+            padding-bottom: 40px;
+          }
+          @include sp{
+            padding-bottom: 32px;
+          }
+          h2{
+            font-size: 3.4rem;
+            letter-spacing: 0.042em;
+            color: $color1;
+            text-align: center;
+            padding-bottom: 24px;
+            @extend .semi-title;
+            @include sp{
+              font-size: 2.6rem;
+              br{
+                @include sp{
+                  display: none;
+                }
+              }
+            }
+          }
+          p{
+            text-align: center;
+          }
+        }
+        &-inner{
+          &__list{
+            width: 100%;
+            @include flex(between,start);
+            @include sm{
+              @include flex(between,start,wrap);
+            }
+            .article-farms{
+              max-width: 340px;
+              width: 100%;
+              padding-bottom: 32px;
+              @include xl{
+                max-width: calc(100% / 3);
+                margin: 0 8px;
+              }
+              @include sm{
+                max-width: calc(50% - 8px);
+                margin: 0 ;
+                padding-bottom: 24px;
+              }
+              @include sp{
+                max-width: 100%;
+              }
+              &__img{
+                a{
+                  width: 100%;
+                  img{
+                    width: 100%;
+                  }
+                }
+              }
+              &__title{
+                padding-top: 16px;
+                @include md{
+                  padding-top: 8px;
+                }
+                p{
+                  @include lines-truncate-2;
+                  font-size: 1.6rem;
+                  letter-spacing: 0.08em;
+                }
+              }
+              &__category{
+                p{
+                  font-size: 1.4rem;
+                  letter-spacing: 0.07em;
+                  color: $color4
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main#farm-single{
+  .section{
+    &-inner{
+      .single{
+        &-profile{
+          max-width: 880px;
+          width: 100%;
+          @include flex(between,start);
+          @include lg{
+            margin: 0 auto;
+          }
+          @include sm{
+            @include flex(center,start,wrap);
+          }
+          &__img{
+            max-width: 256px;
+            width: 100%;
+            flex-shrink: 0;
+            @include lg{
+              max-width: 200px;
+            }
+            @include sm{
+              padding-bottom: 32px;
+            }
+          }
+          &__text{
+            padding-left: 56px;
+            @include lg{
+              padding-left: 24px;
+            }
+            @include sm{
+              padding: 0;
+              max-width: 540px;
+            }
+            .item{
+              font-size: 3.2rem;
+              @extend .semi-title;
+              letter-spacing: 0.04em;
+              color: $color1;
+              @include sp{
+                font-size: 2.4rem;
+                text-align: center;
+              }
+              span{
+                @extend .semi-title;
+                font-size:4.6rem;
+                @include lg{
+                  font-size: 3.2rem;
+                }
+                @include sp{
+                  font-size: 2.4rem;
+                }
+              }
+            }
+            .from{
+              padding: 16px 0 56px 0;
+              @include flex(start,center);
+              font-size: 2.8rem;
+              color: $color1;
+              @extend .text;
+              @include lg{
+                padding-bottom: 32px;
+              }
+              @include sp{
+                font-size: 2.4rem;
+                @include flex(center,center,wrap);
+                padding-bottom: 24px;
+              }
+              span{
+                line-height: 1em;
+                font-size: 1.6rem;
+                padding-right: 32px;
+                @include sp{
+                  padding-right: 0;
+                  text-align: center;
+                  padding-bottom: 24px;
+                  width: 100%;
+                }
+              }
+            }
+            .career{
+              letter-spacing: 0.08em;
+              font-size: 1.6rem;
+              color: $color1;
+              @extend .text;
+            }
+          }
+        }
+        &-query{
+          &__contents{
+            padding: 64px 0;
+            @include sm{
+              padding: 32px 0;
+            }
+            @include sp{
+              padding: 24px 0;
+            }
+            h3{
+              @extend .semi-title;
+              font-size: 3.2rem;
+              letter-spacing: 0.04em;
+              padding-bottom: 24px;
+              @include sm{
+                font-size: 2.4rem;
+              }
+            }
+          }
+          &__inner{
+            .box{
+              &__title{
+                font-size:2.4rem;
+                letter-spacing: 0.05em;
+                line-height: 1.2em;
+                color: $color1;
+                @extend .sab-title;
+              }
+              &__text{
+                padding: 16px 0 56px 0;
+                font-size: 1.6rem;
+                letter-spacing: 0.08rem;
+                line-height: 2em;
+                @include sm{
+                  padding-bottom: 56px;
+                }
+                @include sp{
+                  padding-bottom: 32px;
+                  font-size: 1.4rem;
+                }
+              }
+              &__img{
+                width: 100%;
+                padding-bottom: 64px;
+              }
+              &:last-of-type{
+                padding-bottom: 0;
+              }
+              &:last-of-type{
+                .box__img{
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+        &-item{
+          width: 100%;
+          @include flex(between,start);
+          padding-top: 154px;
+          @include lg{
+            max-width: 768px;
+            @include flex(center,center,wrap);
+            padding-top: 112px;
+            margin: 0 auto;
+          }
+          @include sm{
+            padding-top: 56px;
+          }
+          &__img{
+            max-width: 400px;
+            width: 100%;
+            @include lg{
+              max-width: 320px;
+              padding-bottom: 32px;
+            }
+          }
+          &__inner{
+            max-width: calc((100% - 400px) - 56px);
+            width: 100%;
+            @include lg{
+              max-width: 100%;
+            }
+            h3{
+              font-size: 3.4rem;
+              letter-spacing: 0.04em;
+              padding-top: 2px;
+              @extend .semi-title;
+              @include lg{
+                text-align: center;
+                font-size: 2.4rem;
+              }
+            }
+            p{
+              padding-top: 24px;
+            }
+            .page-link{
+              padding-top: 48px;
+              @include flex(end,center);
+              p{
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

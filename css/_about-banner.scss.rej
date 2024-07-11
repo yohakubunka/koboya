@@ -1,0 +1,8 @@
+diff a/css/_about-banner.scss b/css/_about-banner.scss	(rejected hunks)
+@@ -1,5 +1,5 @@
+ .banner{
+-  padding-bottom:125px;
++  padding-top: 80px;
+   .section-inner{
+     .banner-list{
+       @include flex(between,0,wrap);

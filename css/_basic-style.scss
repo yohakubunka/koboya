@@ -1,0 +1,513 @@
+.section {
+	padding: 154px 0;
+	@include lg {
+		padding: 112px 0;
+	}
+	@include sm {
+		padding: 56px 0;
+	}
+	&-inner {
+		max-width: 1164px;
+		padding: 0 16px;
+		margin: 0 auto;
+	}
+}
+.section:last-child {
+	padding: 154px 0;
+	@include lg {
+		padding: 112px 0;
+	}
+	@include sm {
+		padding: 56px 0;
+	}
+}
+.section.bottom {
+	padding-bottom: 0;
+}
+.section.back {
+	background: $color7;
+}
+.section.second-back {
+	background: $color8;
+}
+.section.back-pot {
+	background-image: url(../images/index/index-about-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+.back-half {
+	position: relative;
+	@include sm {
+		position: inherit;
+		background: $color8;
+	}
+	&::after {
+		content: "";
+		width: 100%;
+		max-height: 480px;
+		height: 50%;
+		@include absoluteCenterX;
+		top: auto;
+		bottom: 0;
+		z-index: -1;
+		background: $color8;
+		@include sm {
+			display: none;
+		}
+	}
+}
+//------------------------------------------------------------------------------
+//font------------------------------------------------------------------------//
+.title {
+	font-family: century-gothic, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.sab-title {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.semi-title {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.btn-text {
+	font-family: century-gothic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.text {
+	font-family: kozuka-gothic-pr6n, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.copy {
+	font-family: century-gothic, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+.bot {
+	font-family: dnp-shuei-mgothic-std, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "fontawesome";
+	src: url("./fonts/fontawesome-webfont.eot"); /* IE9以上用 */
+	src: url("./fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+		/* IE8以前用 */ url("./fonts/fontawesome-webfont.woff2") format("woff2"),
+		/* モダンブラウザ用 */ url("./fonts/fontawesome-webfont.ttf")
+			format("truetype"); /* iOS, Android用 */
+	font-weight: normal;
+	font-style: normal;
+}
+h1.page-title {
+	font-size: 6.6rem;
+	letter-spacing: 0.11em;
+	line-height: 1.2em;
+	color: $color2;
+	width: 100%;
+	@extend .title;
+	@include flex(center, center, 0, 0, 1);
+	@include absoluteCenter;
+	@include lg {
+		font-size: 5.6rem;
+	}
+	@include sm {
+		font-size: 4rem;
+	}
+	@include sp {
+		font-size: 3.6rem;
+	}
+	@include xs {
+		font-size: 2.4rem;
+	}
+	span {
+		font-size: 2.4rem;
+		color: $color2;
+		letter-spacing: 0.05em;
+		@extend .sab-title;
+		font-weight: 400;
+		@include sm {
+			font-size: 1.6rem;
+		}
+		@include sp {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+h2.title {
+	font-size: 6.6rem;
+	color: $color6;
+	letter-spacing: 0.05em;
+	line-height: 1em;
+	padding-bottom: 72px;
+	@extend .title;
+	@include sm {
+		font-size: 3.6rem;
+		padding-bottom: 40px;
+	}
+	@include sp {
+		line-height: 1.6em;
+		padding-bottom: 32px;
+	}
+	span {
+		@extend .title;
+		color: $color1;
+		letter-spacing: 0.05em;
+		line-height: 1em;
+		font-size: 6.6rem;
+		@include sm {
+			font-size: 3.6rem;
+		}
+	}
+}
+h2.vertical-bottom {
+	padding: 0 0 0 56px;
+	@include lg {
+		padding: 0;
+		padding-bottom: 56px;
+	}
+	@include sm {
+		padding-bottom: 40px;
+	}
+}
+h2.inner-title {
+	@extend .semi-title;
+	font-size: 3.4rem;
+	letter-spacing: 0.042em;
+	color: $color1;
+	text-align: center;
+	padding-bottom: 64px;
+	@include sm {
+		padding-bottom: 40px;
+	}
+	@include sp {
+		font-size: 2.6rem;
+		padding-bottom: 32px;
+	}
+}
+h3 {
+	@extend .sab-title;
+	font-size: 2.8rem;
+	line-height: 1.5em;
+	letter-spacing: 0.04em;
+	color: $color1;
+	@include sp {
+		font-size: 2rem;
+	}
+	@include xs {
+		font-size: 1.8rem;
+	}
+}
+h3.commentary-title {
+	@extend .semi-title;
+	font-size: 2.4rem;
+	line-height: 1em;
+	letter-spacing: 0.05em;
+	color: $color1;
+	@include sp {
+		font-size: 1.8rem;
+	}
+	@include xs {
+		font-size: 1.6rem;
+	}
+}
+h4.title {
+	@extend .title;
+	font-size: 1.8rem;
+	letter-spacing: 0.04em;
+	line-height: 1em;
+	color: $color1;
+	padding-bottom: 32px;
+}
+.title-box {
+	h2.title {
+		padding-bottom: 0;
+	}
+	p {
+		padding: 32px;
+		font-size: 1.6rem;
+		letter-spacing: 0.08em;
+	}
+	padding-bottom: 72px;
+	@include lg {
+		padding-bottom: 56px;
+	}
+	@include sm {
+		padding-bottom: 40px;
+	}
+}
+
+//------------------------------------------------------------------------------
+//aline-------------------------------------------------------------------------
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.rihgt {
+	text-align: right;
+}
+.vertical-text {
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	@include lg {
+		writing-mode: inherit;
+		-ms-writing-mode: inherit;
+		-webkit-writing-mode: inherit;
+		-o-writing-mode: inherit;
+		transform: none;
+	}
+}
+.vertical-bottom {
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	transform: rotate(-180deg);
+	padding: 0;
+	@include lg {
+		writing-mode: inherit;
+		-ms-writing-mode: inherit;
+		-webkit-writing-mode: inherit;
+		-o-writing-mode: inherit;
+		transform: none;
+	}
+}
+.flex-centner {
+	@include flex(center, center);
+}
+.flex-left {
+	@include flex(start, center);
+}
+.flex-rihgt {
+	@include flex(end, center);
+}
+.flex-between {
+	@include flex(between, center);
+}
+//------------------------------------------------------------------------------
+//btn---------------------------------------------------------------------------
+.page-link {
+	padding-top: 56px;
+	&__btn {
+		max-width: 170px;
+		width: 100%;
+		height: 42px;
+		a {
+			width: 100%;
+			height: 100%;
+			background: $color5;
+			@include flex(center, center);
+			transition: 0.5s;
+
+			p {
+				@extend .btn-text;
+				font-size: 1.8rem;
+				color: $color2;
+				letter-spacing: 0.12em;
+				line-height: 1em;
+				position: relative;
+				@include sp {
+					font-size: 1.4rem;
+					letter-spacing: 0.07em;
+				}
+				&::after {
+					content: "";
+					width: 5px;
+					height: 10px;
+					display: block;
+					background-image: url(../svg/common/btn-icon.svg);
+					background-repeat: no-repeat;
+					background-size: cover;
+					@include absoluteCenterY;
+					left: auto;
+					right: -20px;
+					transition: 0.5s;
+				}
+			}
+		}
+		a:hover {
+			background: $color1;
+			transition: 0.5s;
+			p {
+				&::after {
+					right: -24px;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+}
+.eclink {
+	padding-top: 20px;
+	margin: 0 auto;
+	@include flex(center, center);
+	@include sp {
+		padding-top: 16px;
+	}
+	.page-link__btn {
+		max-width: 240px;
+		height: 42px;
+		width: 100%;
+		a {
+			width: 100%;
+			background: $color3;
+			p {
+				@extend .sab-title;
+				font-size: 1.6rem;
+				letter-spacing: 0.12em;
+				@include flex(center, center);
+				@include sp {
+					font-size: 1.4rem;
+					letter-spacing: 0.07em;
+				}
+				&::before {
+					content: "";
+					width: 32px;
+					height: 24px;
+					display: block;
+					margin-right: 10px;
+					background-image: url(../svg/common/side-btn-cart.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+		a:hover {
+			background: $color1;
+		}
+	}
+}
+//------------------------------------------------------------------------------
+//on/off------------------------------------------------------------------------
+.sp {
+	display: none !important;
+	@include sm {
+		display: flex !important;
+	}
+}
+.pc {
+	display: flex !important;
+	@include sm {
+		display: none !important;
+	}
+}
+.pc-mv {
+	display: block;
+	@include sp {
+		display: none;
+	}
+}
+.sp-mv {
+	display: none;
+	@include sp {
+		display: block;
+	}
+}
+.spbr {
+	display: none;
+	@include sp {
+		display: inline-block;
+	}
+}
+.pcbr {
+	display: inline-block;
+	@include sp {
+		display: none;
+	}
+}
+#toggle-menu {
+	.subbox {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+#toggle-menu {
+	display: none;
+}
+
+//breadcrumb--------------------------------------------------------------------
+.breadcrumb-list {
+	max-width: 1164px;
+	width: 100%;
+	padding: 24px 16px 0 16px;
+	margin: 0 auto;
+	@include sm {
+		padding-top: 16px;
+	}
+	@include sp {
+		padding-top: 8px;
+	}
+	@include flex(start, center);
+	li {
+		@include flex(center, center);
+		span {
+			font-size: 1.4rem;
+		}
+		a span {
+			font-size: 1.6rem;
+			line-height: 1em;
+			color: $color1;
+			@extend .semi-title;
+			@include lg {
+				font-size: 1.4rem;
+			}
+			@include sp {
+				font-size: 1.2rem;
+			}
+		}
+		&:last-child {
+			a span {
+				max-width: 300px;
+				width: 100%;
+				@include lines-truncate;
+				@include sm {
+					max-width: 200px;
+				}
+				@include sp {
+					max-width: 100px;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+//農園案内の記事作成後削除-------------------------------------------------------------
+.reserve-box {
+	width: 100%;
+	@include flex(between, center);
+	@include sp {
+		@include flex(center, center, wrap);
+	}
+	li {
+		max-width: 354px;
+		width: 100%;
+		border-radius: 5px;
+		@include xl {
+			max-width: calc((100% / 3) - 16px);
+			width: 100%;
+			margin: 0 8px;
+		}
+		@include sp {
+			max-width: 100%;
+			margin: 0 auto;
+			margin-bottom: 32px;
+			@include flex(center, center);
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

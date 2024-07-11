@@ -1,0 +1,103 @@
+.memory{
+  .memories{
+    .slick-list{
+      .slick-track{
+        @include sp{
+          @include flex(center,center);
+        }
+        .slick-slide{
+          li{
+            max-width: 415px;
+            margin: 0 8px;
+            position: relative;
+            transition: 0.5s;
+            @include sp{
+              margin: 0;
+              padding: 16px;
+            }
+            @include xs{
+              padding: 8px;
+            }
+            img{
+              margin: 0 auto;
+              padding: 1px;
+            }
+            .commentary{
+              max-width: 415px;
+              height: 100%;
+              width: 100%;
+              background: $color7;
+              padding: 32px;
+              opacity: 0;
+              transition: 0.5s;
+              @include absoluteCenter;
+              @include lg{
+                padding: 24px;
+              }
+              @include sp{
+                display: none;
+              }
+              &-title{
+                text-align: center;
+                padding-bottom: 24px;
+              }
+              p{
+                font-size: 1.4rem;
+                line-height: 1.7em;
+                letter-spacing: 0.07em;
+              }
+            }
+          }
+          li:hover{
+            .commentary{
+              opacity: 1;
+              transition: 0.5s;
+            }
+          }
+        }
+        .slick-slide.slick-active{
+          li{
+            @include sp{
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .slick-arrow{
+      display: none!important;
+    }
+  }
+}
+.memory-letter{
+  display: none;
+  @include sp{
+    display: block;
+  }
+  ul{
+    padding-top: 24px;
+    li{
+      max-width: calc(100% - 32px);
+      width: 100%;
+      padding: 24px;
+      margin: 0 auto;
+      background: $color7;
+      display: none;
+      &.active {
+        display: block;
+      }
+      h3{
+        font-size: 2.0rem;
+        text-align: center;
+        padding-bottom: 16px;
+        @include xs{
+          font-size: 1.8rem;
+        }
+      }
+      p{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

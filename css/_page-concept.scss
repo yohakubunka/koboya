@@ -1,0 +1,225 @@
+#concept{
+  .important-list{
+    ul{
+      @include flex(between,0);
+      @include xl{
+        @include flex(around,0);
+      }
+      @include md{
+        display: block;
+      }
+      li{
+        width: 100%;
+        max-width: 336px;
+        @include xl{
+          max-width: calc(33% - 8px);
+        }
+        @include md{
+          max-width: 336px;
+        }
+        @include md{
+          margin: 0 auto;
+          padding-bottom: 56px;
+          &:nth-child(3){
+            padding-bottom: 0;
+          }
+        }
+        @include sm{
+          padding-bottom: 48px;
+        }
+        .important-img{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+        .important-text{
+          height: 248px;
+          padding: 24px 32px 32px;
+          background-color: $color7;
+          @include xl{
+            height: 250px;
+          }
+          @include lg{
+            height: 296px;
+            padding: 24px;
+          }
+          @include md{
+            height: auto;
+            padding: 16px 24px 24px;
+          }
+          h3{
+            padding-bottom: 20px;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .feature-inner{
+    @include flex(between,0);
+    padding-bottom: 112px;
+    @include lg{
+      @include flex(between,center);
+    }
+    @include md{
+      flex-wrap: wrap;
+    }
+    @include sp{
+      padding-bottom: 56px;
+    }
+    &__img{
+      width: 100%;
+      max-width: calc(100% - 80px);
+      margin: 0 8px;
+      @include lg{
+        max-width: calc(50% - 16px);
+      }
+      @include md{
+        max-width: 100%;
+        @include flex(center,center);
+      }
+      img{
+        @include md{
+          width: 100%;
+          max-width: 540px;
+          height: 320px;
+          object-fit: cover;
+        }
+        @include sp{
+          height: auto;
+        }
+      }
+    }
+    &__text{
+      width: 100%;
+      max-width:50%;
+      @include lg{
+        max-width: calc(50% - 16px);
+      }
+      @include md{
+        max-width: 100%;
+      }
+      .commentary-title{
+        padding-bottom: 40px;
+        font-size: 2.8rem;
+        line-height: 1.7em;
+        @include lg{
+          font-size: 2.4rem;
+          padding-bottom: 16px;
+        }
+        @include md{
+          padding-top: 40px;
+        }
+        @include sp{
+          padding: 24px 0;
+          font-size: 2rem;
+        }
+        br{
+          @include lg{
+            display: none;
+          }
+          @include md{
+            display: block;
+          }
+        }
+      }
+      p{
+        line-height: 1.98em;
+        @include lg{
+          line-height: 1.6em;
+        }
+      }
+    }
+  }
+  .revitalization-inner{
+    @include flex(between,0);
+    @include md{
+      flex-wrap: wrap;
+    }
+    &__text{
+      width: 100%;
+      max-width: 50%;
+      @include md{
+        padding-top: 0;
+        max-width: 100%;
+      }
+      .commentary-title{
+        padding:56px 0 40px 0;
+        font-size: 2.8rem;
+        @include md{
+          padding-top: 0;
+        }
+        @include sp{
+          font-size: 2rem;
+        }
+      }
+      p{
+        line-height: 1.98em;
+      }
+      ul{
+        padding-left: 16px;
+        list-style-type:disc;
+        color: $color1;
+        li{
+          line-height: 2.22em;
+          br{
+            @include md{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &__img{
+      position: relative;
+      width: 100%;
+      max-width: calc(50% - 56px);
+      height: 600px;
+      @include lg{
+        max-width: calc(50% - 24px);
+      }
+      @include md{
+        max-width: 100%;
+        position: unset;
+        height: auto;
+        padding-top: 56px;
+        @include flex(around,0);
+      }
+      @include sm{
+        @include flex(between,center);
+      }
+      @include sp{
+        margin: 0 auto;
+        padding-top: 40px;
+        text-align: center;
+      }
+      .conceptimg1{
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        @include md{
+          position: inherit;
+          max-width: calc(50% - 16px);
+          width: 100%;
+        }
+        @include sp{
+          width: 300px;
+        }
+      }
+      .conceptimg2{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include md{
+          position: inherit;
+          max-width: calc(50% - 16px);
+          width: 100%;
+        }
+        @include sp{
+          width: 300px;
+        }
+      }
+    }
+  }
+}

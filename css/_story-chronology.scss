@@ -1,0 +1,159 @@
+#story{
+  .nameorigin-inner{
+    @include flex(between,0);
+    @include lg{
+      display: block;
+    }
+    &__text{
+      width: 100%;
+      max-width: 564px;
+      @include xl{
+        padding-right: 15px;
+      }
+      @include lg{
+        max-width: 640px;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-bottom: 32px;
+      }
+      p{
+        line-height: 2.12em;
+      }
+    }
+    &__img{
+      @include lg{
+        width: 100%;
+        max-width: 510px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .chronology-inner{
+    @include flex;
+    @include md{
+      display: block;
+    }
+    @include sp{
+      padding-top: 32px;
+    }
+    &__left, &__right{
+      width: 100%;
+      max-width: 564px;
+      padding-top: 56px;
+      @include lg{
+        // max-width: 420px;
+      }
+      @include md{
+        margin: 0 auto;
+        padding-top: 32px;
+      }
+      .chronology-list{
+        width: 100%;
+        max-width: 564px;
+        @include lg{
+          max-width: 352px;
+        }
+        @include md{
+          max-width: 564px;
+        }
+        li{
+          @include flex(start,center);
+          width: 100%;
+          max-width: 564px;
+          padding-bottom: 48px;
+          @include sp{
+            padding-bottom: 32px;
+          }
+          .year{
+            font-size: 2.8rem;
+            text-align: center;
+            @include sm{
+              font-size: 2.4rem;
+            }
+            span{
+              color:$color3;
+              font-size: 1.4rem;
+              @include sm{
+                font-size: 1.2rem;
+              }
+            }
+          }
+          .details{
+            padding-left: 64px;
+            @include lg{
+              padding-left:48px;
+            }
+            @include sm{
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+    &__left{
+      position: sticky;
+      li{
+        @include md{
+          &:nth-child(9){
+            padding-bottom: 0;
+          }
+        }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 96px;
+        height: 100%;
+        border-left: 1px solid $color3;
+        @include lg{
+          left: 88px;
+        }
+        @include md{
+          left: 80px;
+        }
+        @include sp{
+          left: 72px;
+        }
+      }
+    }
+    &__right{
+      position: sticky;
+      &:before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 160px;
+        height: 100%;
+        border-left: 1px solid $color3;
+        @include lg{
+          left: 112px;
+        }
+        @include md{
+          left: 80px;
+        }
+        @include sp{
+          left: 72px;
+        }
+      }
+      .chronology-list{
+        padding-left: 64px;
+        @include lg{
+          padding-left:24px;
+        }
+        @include md{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .banner{
+    padding: 154px 0;
+    @include lg{
+      padding: 112px 0;
+    }
+    @include md{
+      padding: 56px 0;
+    }
+  }
+}

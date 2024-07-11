@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "reset";
+@import "mixin";
+@import "code-prettify.css";
+
+html {
+	font-size: 10px !important;
+	scroll-behavior: smooth;
+}
+
+pre {
+	background-color: rgba(#333, 0.36);
+}
+p,
+span,
+ul,
+li,
+ol,
+dt,
+dd,
+a {
+	@extend .text;
+	font-size: 1.6rem;
+	line-height: 1.8em;
+	letter-spacing: 0.08em;
+	color: $color1;
+	@include sp {
+		font-size: 1.4rem;
+		letter-spacing: 0.07em;
+	}
+}
+a {
+	display: inline-block;
+	color: $color1;
+	text-decoration: none;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+img {
+	max-width: 100%;
+	display: inline-block;
+	height: initial;
+}
+
+// setting ========================================================
+// font ===========================================================
+@for $i from 10 through 80 {
+	.font#{$i} {
+		font-size: #{$i}px;
+	}
+}
+
+@import "basic-style";
+@import "header";
+@import "footer";
+@import "index";
+@import "front-page";
+@import "index-about";
+@import "index-news";
+@import "index-shoplist";
+@import "main-visual";
+@import "page-about";
+@import "page-calendar";
+@import "page-contact";
+@import "page-news";
+@import "page-pickup";
+@import "page-farmsinteview";
+@import "page-technology";
+@import "page-concept";
+@import "share-btn";
+@import "side-btn";
+@import "story-slide";
+@import "story-chronology";
+@import "subscrive";
+@import "animation";
+@import "about-banner";
+@import "single";
+@import "page-company";
+@import "page-famer";
+@import "page-companies_contact";
+@import "page-ec_contact";
+
+/*
+* 案件担当者以外が記述する場合はなるべく此処に記述してください。
+* コーディング終了後修正記述用のscssファイルです。
+* このimportしたファイル以下に記述しないでください。
+*/

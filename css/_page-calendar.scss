@@ -1,0 +1,454 @@
+main#calendar {
+	.section {
+		&-inner {
+			.calendar {
+				&__text {
+					p {
+						padding-top: 24px;
+						text-align: center;
+					}
+				}
+				&__month {
+					padding-top: 72px;
+					@include lg {
+						padding-top: 56px;
+					}
+					@include sp {
+						padding-top: 32px;
+					}
+					&--list {
+						@include flex(between, center, wrap);
+						@include xl {
+							max-width: 856px;
+							width: 100%;
+							margin: 0 auto;
+						}
+						@include sm {
+							max-width: 540px;
+							@include flex(center, center, wrap);
+						}
+						@include xs {
+							@include flex(between, center, wrap);
+						}
+						li {
+							max-width: 160px;
+							width: 100%;
+							height: 40px;
+							margin: 0 32px 32px 0;
+							@include xl {
+								margin: 0 8px 24px 8px;
+							}
+							@include sm {
+								max-width: 100px;
+								height: 32px;
+								margin: 0 8px 16px 8px;
+							}
+							@include xs {
+								max-width: 30%;
+								margin: 0 0 16px 0;
+							}
+							&:nth-child(6),
+							&:last-child {
+								margin-right: 0;
+								@include xl {
+									margin: 0 8px 24px 8px;
+								}
+								@include sm {
+									margin: 0 8px 16px 8px;
+								}
+								@include xs {
+									margin: 0 0 16px 0;
+								}
+							}
+							a {
+								width: 100%;
+								height: 100%;
+								border: 1px solid $color1;
+								border-radius: 30px;
+								@include flex(center, center);
+								transition: 0.5s;
+								&:hover {
+									border: none;
+									background: $color1;
+									p {
+										color: $color2;
+									}
+								}
+								p {
+									font-size: 2.4rem;
+									letter-spacing: 0.05em;
+									line-height: 1em;
+									@extend .sab-title;
+									@include sm {
+										font-size: 1.6rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				&__list {
+					&--article {
+						width: 100%;
+						@include flex(between, 0, wrap);
+						@include sm {
+							@include flex(center, center, wrap);
+						}
+						.article {
+							max-width: calc(50% - 24px);
+							width: 100%;
+							border: 1px solid $color1;
+							border-radius: 5px;
+							padding: 32px;
+							margin-top: 48px;
+							@include sm {
+								margin-top: 24px;
+							}
+							&:nth-child(n + 1):nth-child(-n + 2) {
+								margin-top: 24px;
+								@include xl {
+									margin-top: 16px;
+								}
+								@include sm {
+									margin-top: 24px;
+								}
+							}
+							@include lg {
+								max-width: calc(50% - 16px);
+								padding: 24px;
+							}
+							@include md {
+								max-width: calc(50% - 8px);
+							}
+							@include sm {
+								max-width: 400px;
+							}
+							@include xs {
+								padding: 16px;
+							}
+							&__img {
+								img {
+									width: 100%;
+									max-height: 258px;
+									height: 100%;
+									object-fit: cover;
+									border-radius: 5px;
+								}
+							}
+							&__inner {
+								&--title {
+									@extend .semi-title;
+									font-size: 2.4rem;
+									text-align: center;
+									padding: 24px 0;
+									@include lg {
+										padding: 16px 0;
+									}
+									@include sp {
+										font-size: 2rem;
+										line-height: 1em;
+									}
+								}
+								&--type {
+									p {
+										@include flex(start, start);
+										@include sp {
+											@include flex(start, start, wrap);
+										}
+										span {
+											flex-shrink: 0;
+											@include sp {
+												width: 100%;
+											}
+										}
+									}
+								}
+								&--share {
+									padding-top: 24px;
+									margin: 0 auto;
+									@include flex(center, center);
+									@include lg {
+										padding-top: 16px;
+									}
+									.sharebtn,
+									.buybtn {
+										margin: 0 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal {
+	&__back {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background: #000;
+		opacity: 0.4;
+		width: 120vw;
+		z-index: 990;
+		height: 120vh;
+	}
+	&__inner {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		z-index: 999;
+		width: 400px;
+		height: 400px;
+		background: $color2;
+		@include sp {
+			width: 300px;
+		}
+		.close-btn {
+			position: absolute;
+			top: 24px;
+			right: 24px;
+			width: 32px;
+			height: 32px;
+			@include sp {
+				width: 24px;
+				height: 24px;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		ul {
+			width: 100%;
+			height: 100%;
+			padding: 56px 0;
+			@include flex(center, start, 0, 0, 1);
+			li {
+				max-width: 240px;
+				width: 100%;
+				margin: 0 auto;
+				padding-bottom: 32px;
+				&:last-child {
+					padding-bottom: 0;
+				}
+				@include sp {
+					max-width: 160px;
+				}
+				a,
+				.copy-value {
+					@include flex(start, center);
+					i {
+						width: 30px;
+						@include flex(center, center);
+						font-size: 3.2rem;
+						@include flex(center, center);
+						@include sp {
+							width: 24px;
+							font-size: 2.4rem;
+						}
+					}
+					img {
+						width: 30px;
+						@include sp {
+							width: 24px;
+						}
+					}
+					p {
+						padding-left: 24px;
+						font-size: 2.4rem;
+						@include sp {
+							font-size: 1.6rem;
+						}
+					}
+				}
+				.copy-value {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+//fruit-category
+main#fruit-category {
+	.section {
+		&-inner {
+			.calendar {
+				&__text {
+					p {
+						padding-top: 24px;
+						text-align: center;
+					}
+				}
+				&__month {
+					padding-top: 72px;
+					@include lg {
+						padding-top: 56px;
+					}
+					@include sp {
+						padding-top: 32px;
+					}
+					&--list {
+						@include flex(between, center, wrap);
+						@include xl {
+							max-width: 856px;
+							width: 100%;
+							margin: 0 auto;
+						}
+						@include sm {
+							max-width: 540px;
+							@include flex(center, center, wrap);
+						}
+						li {
+							max-width: 160px;
+							width: 100%;
+							height: 40px;
+							margin: 0 32px 32px 0;
+							@include xl {
+								margin: 0 8px 24px 8px;
+							}
+							@include sm {
+								max-width: 100px;
+								height: 32px;
+								margin: 0 8px 16px 8px;
+							}
+							&:nth-child(6),
+							&:last-child {
+								margin-right: 0;
+								@include xl {
+									margin: 0 8px 24px 8px;
+								}
+								@include sm {
+									margin: 0 8px 16px 8px;
+								}
+							}
+							a {
+								width: 100%;
+								height: 100%;
+								border: 1px solid $color1;
+								border-radius: 30px;
+								@include flex(center, center);
+								transition: 0.5s;
+								&:hover {
+									border: none;
+									background: $color1;
+									p {
+										color: $color2;
+									}
+								}
+								p {
+									font-size: 2.4rem;
+									letter-spacing: 0.05em;
+									line-height: 1em;
+									@extend .sab-title;
+									@include sm {
+										font-size: 1.6rem;
+									}
+								}
+							}
+						}
+					}
+				}
+				&__list {
+					&--article {
+						width: 100%;
+						@include flex(between, 0, wrap);
+						@include sm {
+							@include flex(center, center, wrap);
+						}
+						.article {
+							max-width: calc(50% - 24px);
+							width: 100%;
+							border: 1px solid $color1;
+							border-radius: 5px;
+							padding: 32px;
+							margin-top: 48px;
+							@include sm {
+								margin-top: 24px;
+							}
+							&:nth-child(n + 1):nth-child(-n + 2) {
+								margin-top: 24px;
+								@include xl {
+									margin-top: 16px;
+								}
+								@include sm {
+									margin-top: 24px;
+								}
+							}
+							@include lg {
+								max-width: calc(50% - 16px);
+								padding: 24px;
+							}
+							@include md {
+								max-width: calc(50% - 8px);
+							}
+							@include sm {
+								max-width: 400px;
+							}
+							@include xs {
+								padding: 16px;
+							}
+							&__img {
+								img {
+									width: 100%;
+									border-radius: 5px;
+								}
+							}
+							&__inner {
+								&--title {
+									@extend .semi-title;
+									font-size: 2.4rem;
+									text-align: center;
+									padding: 24px 0;
+									@include lg {
+										padding: 16px 0;
+									}
+									@include sp {
+										font-size: 2rem;
+										line-height: 1em;
+									}
+								}
+								&--type {
+									p {
+										@include flex(start, start);
+										@include sp {
+											@include flex(start, start, wrap);
+										}
+										span {
+											flex-shrink: 0;
+											@include sp {
+												width: 100%;
+											}
+										}
+									}
+								}
+								&--share {
+									padding-top: 24px;
+									margin: 0 auto;
+									@include flex(center, center);
+									@include lg {
+										padding-top: 16px;
+									}
+									.sharebtn,
+									.buybtn {
+										margin: 0 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

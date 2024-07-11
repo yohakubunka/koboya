@@ -1,0 +1,361 @@
+#pickup {
+	.section {
+		padding-bottom: 0;
+		.section-inner {
+			border-bottom: 1px solid $color1;
+		}
+		.tab {
+			&-inner {
+				&__contents {
+					padding-top: 144px;
+					padding-bottom: 152px;
+					@include lg {
+						padding: 96px 0 112px 0;
+					}
+					@include sm {
+						padding: 48px 0 56px 0;
+					}
+					.lgbr{
+						display: none;
+						@include lg{
+							display: inline-block;
+						}
+					}
+					.subtitle{
+						padding-top: 24px;
+            @include flex(center,center);
+						@include xl{
+              flex-direction: column;
+							font-size: 2.2rem;
+						}
+						@include sp{
+							font-size: 2rem;
+						}
+						&__top{
+              	width: auto;
+							&--text{
+                @include flex(center,start);
+								font-size: 2.2rem;
+								@extend .semi-title;
+                		@include lg{
+                  			font-size: 2rem;
+                	}
+					.rub{
+						p{
+							line-height: 1em;
+							font-size: 2.2rem;
+							@extend .semi-title;
+							@include lg{
+							font-size: 2rem;
+							}
+						}
+						span{
+							padding-top: 8px;
+							line-height: 1em;
+							font-size: 2.2rem;
+							display: block;
+							@extend .semi-title;
+							@include lg{
+								padding-top: 8px;
+								font-size: 1.6rem;
+							}
+							@include sp{
+							display: none;
+							}
+						}
+					}
+				}
+			}
+			&__bottom{
+              width: auto;
+							@include flex(center,center,0,0,1);
+              @include xl{
+                padding-top: 8px;
+                flex-direction: column;
+              }
+              // @include md{
+              //   padding-top: 8px;
+              // }
+							p{
+                line-height: 1em;
+								font-size: 2.2rem;
+								@extend .semi-title;
+                @include lg{
+                  font-size: 2rem;
+                }
+                &:last-of-type{
+                  padding-top: 8px;
+                  line-height: 1em;
+								  font-size: 2.2rem;
+                  @include lg{
+										padding-top: 8px;
+                    font-size: 1.6rem;
+                  }
+                  @include sp{
+                    display: none;
+                  }
+                }
+							}
+						}
+					}
+					.pick-box {
+						max-width: 1164px;
+						padding: 0 16px;
+						margin: 0 auto;
+						@include flex(between, center);
+						@include lg {
+							@include flex(between, center);
+						}
+						@include sm {
+							@include flex(center, center);
+							flex-direction: column-reverse;
+						}
+						&__img {
+							max-width: calc(50% - 48px);
+							width: 100%;
+							margin-right: 0;
+							position: relative;
+							@include flex(center, center);
+							@include xl {
+								max-width: 480px;
+								width: 100%;
+							}
+							@include lg {
+								max-width: 440px;
+							}
+							@include sm {
+								max-width: 500px;
+							}
+							@include sp {
+								max-width: 375px;
+							}
+							@include xs {
+								max-width: 320px;
+							}
+							.point {
+								position: absolute;
+								@include flex(center, center);
+								flex-direction: column-reverse;
+								cursor: pointer;
+							}
+							.strawberry {
+								max-width: 250px;
+								width: 100%;
+						}
+						}
+						.fruit-img {
+							.point:first-of-type {
+									bottom: 24px;
+									left: 120px;
+									@include lg {
+											left: 80px;
+									}
+									@include sm {
+											left: 105px;
+									}
+									@include sp {
+											left: 50px;
+									}
+									@include xs {
+											left: 24px;
+									}
+									img {
+											padding-left: 30px;
+											padding-bottom: 8px;
+											@include xs {
+													padding-left: 16px;
+											}
+									}
+							}
+							.point:last-of-type {
+									top: -30px;
+									right: 30%;
+									@include sp {
+											right: 25%;
+									}
+									@include xs {
+											right: 20%;
+									}
+									img {
+											padding-top: 7px;
+									}
+							}
+					}
+						.derifuru-img {
+							img.derifuru-pot {
+								padding-top: 40px;
+								@include xs {
+									padding-bottom: 40px;
+								}
+							}
+							.point:first-of-type {
+								top: -0;
+								right: 36%;
+								@include lg {
+									right: 32%;
+								}
+								img {
+									padding-top: 8px;
+								}
+							}
+							.point:nth-of-type(2) {
+								bottom: -24px;
+								right: 80px;
+								@include lg {
+									right: 24px;
+								}
+								@include sm {
+									// bottom: 64px;
+									bottom: -10px;
+    							right: 64px;
+								}
+								@include sp {
+									right: 32px;
+									bottom: -24px;
+								}
+								@include xs {
+									bottom: 0;
+								}
+								img {
+									padding-right: 60px;
+									padding-bottom: 8px;
+								}
+							}
+							// .point:last-of-type {
+							// 	bottom: 32px;
+							// 	left: 60px;
+							// 	@include lg {
+							// 		bottom: 0;
+							// 		left: 20px;
+							// 	}
+							// 	@include sm {
+							// 		bottom: 32px;
+							// 	}
+							// 	@include sp {
+							// 		bottom: 0;
+							// 	}
+							// 	img {
+							// 		padding-bottom: 8px;
+							// 		padding-left: 40px;
+							// 	}
+							// }
+						}
+						&__inner {
+							max-width: calc(50% - 48px);
+							width: 100%;
+							margin-left: 0;
+							@include xl {
+								max-width: 532px;
+								padding-right: 16px;
+							}
+							@include lg {
+								max-width: 440px;
+							}
+							@include sm {
+								max-width: 532px;
+								padding-right: 0;
+								padding-top: 32px;
+							}
+							.accordion {
+								padding-bottom: 72px;
+								@include sm {
+									padding-bottom: 56px;
+								}
+								@include sp {
+									padding-bottom: 32px;
+								}
+								&-title.on,
+								&-title.stay {
+									.number {
+										width: 42px;
+										height: 38px;
+										border: none;
+										background: $color1;
+										color: $color2;
+										@include flex(center, center);
+										@extend .sab-title;
+										line-height: 1em;
+										margin-right: 16px;
+										cursor: pointer;
+									}
+								}
+								&-title {
+									font-size: 2.4rem;
+									color: $color1;
+									letter-spacing: 0.05em;
+									@extend .semi-title;
+									@include flex(start, center);
+									padding-bottom: 32px;
+									@include sm {
+										padding-bottom: 24px;
+									}
+									@include sp {
+										@include flex(start, start, 0, 0, 1);
+										font-size: 1.8rem;
+										padding-bottom: 16px;
+									}
+									.number {
+										width: 42px;
+										height: 38px;
+										border: 1px solid $color1;
+										background: $color2;
+										@include flex(center, center);
+										@extend .sab-title;
+										line-height: 1em;
+										margin-right: 16px;
+										cursor: pointer;
+										@include sp {
+											margin-bottom: 16px;
+										}
+									}
+								}
+								&-inner {
+									width: 100%;
+									padding-left: 56px;
+									@include sp {
+										padding: 0;
+									}
+									&__img {
+										padding-top: 32px;
+										img {
+											@include sp {
+												width: 100%;
+											}
+										}
+									}
+								}
+							}
+							.accordion:last-child {
+								padding-bottom: 0;
+							}
+						}
+					}
+				}
+				&__contents:nth-of-type(2) {
+					background: $color7;
+					.pick-box {
+						@include sm {
+							flex-direction: column;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//base
+.number {
+	width: 42px;
+	height: 38px;
+	border: 1px solid $color1;
+	background: $color2;
+	@include flex(center, center);
+	@extend .sab-title;
+	line-height: 1em;
+}
+.number.start {
+	border: none;
+	background: $color1;
+	color: $color2;
+}

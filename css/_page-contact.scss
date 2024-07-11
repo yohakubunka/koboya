@@ -1,0 +1,183 @@
+main#contact{
+  .section{
+    &-inner{
+      .contact{
+        p{
+          text-align: center;
+          br{
+            @include sp{
+              display: none;
+            }
+          }
+          .tel{
+            color: $color4;
+            i{
+              margin-right: 8px;
+            }
+          }
+          &:first-child{
+            padding-bottom: 24px;
+          }
+        }
+        .input{
+          padding-top: 72px;
+          max-width: calc(100% - 160px);
+          @include flex(center,center,wrap);
+          margin: 0 auto;
+          @include lg{
+            max-width:  calc(100% - 80px);
+          }
+          @include sm{
+            max-width: 100%;
+            padding-top: 40px;
+          }
+          @include sp{
+            padding-top: 32px;
+          }
+          &-select{
+            max-width: 100%;
+            width: 100%;
+            padding-bottom: 24px;
+            .contact-select{
+              @include flex(center,center);
+              .wpcf7-checkbox{
+                span{
+                  margin: 0 32px 0 0;
+                  @include sm{
+                    margin: 0 16px 0 0;
+                  }
+                  @include sp{
+                    max-width: calc(100% / 3);
+                    width: 100%;
+                    margin: 0;
+                  }
+                  &:last-child{
+                    margin: 0;
+                  }
+                  label{
+                    @include flex(start,center);
+                    input{
+                      margin-right: 8px;
+                    }
+                    span{
+                      @include sp{
+                        max-width: 100%;
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &__box{
+            max-width: 100%;
+            width: 100%;
+            @include flex(between,start);
+            padding-bottom: 32px;
+            @include sm{
+              @include flex(between,start,wrap);
+              padding-bottom: 24px;
+              max-width: calc(100% - 32px);
+              margin: 0 auto;
+            }
+            &--name{
+              max-width: 172px;
+              width: 100%;
+              margin-right: 16px;
+              flex-shrink: 0;
+              @include sm{
+                max-width: 100%;
+                margin-right: 0;
+                padding-bottom: 16px;
+              }
+              span{
+                color: $color4;
+              }
+            }
+            &--columu{
+              max-width: 624px;
+              width: 100%;
+              @include sm{
+                max-width: 100%;
+              }
+              span{
+                input{
+                  height: 40px;
+                  width: 100%;
+                  padding: 0 5px;
+                  background: $color7;
+                }
+                textarea{
+                  height: 96px;
+                  width: 100%;
+                  background: $color7;
+                }
+              }
+            }
+          }
+          .privacy{
+            p{
+              text-align: left;
+              span{
+                color: $color4;
+              }
+            }
+            &-inner{
+              height: 216px;
+              padding: 32px;
+              background: $color7;
+              overflow-y: scroll;
+              @include sm{
+                padding: 24px;
+              }
+              @include sp{
+                padding: 16px;
+              }
+              p{
+                padding: 0;
+                text-align: left;
+                line-height: 2em;
+              }
+            }
+            @include scrollbar;
+          }
+          .agree{
+            padding: 32px 0 56px 0;
+            @include lg{
+              padding: 24px 0 32px 0;
+            }
+            @include sp{
+              padding: 16px 0 24px 0;
+            }
+            p:first-child{
+              padding-top: 16px;
+            }
+          }
+          .send{
+            max-width: 100%;
+            width: 100%;
+            &__inner{
+              position: relative;
+              input{
+                width: 100%;
+                height: 72px;
+                background: $color3;
+                color: $color2;
+                line-height: 1em;
+                font-size: 2.0rem;
+                @extend .semi-title;
+                @include flex(center,center);
+              }
+              span.ajax-loader{
+                margin: 0;
+                @include absoluteCenterY;
+                left: calc(50% + 64px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+main#news,
+main#category,
+main#date {
+	.section {
+		&-inner {
+			.news.tab:first-of-type {
+				border-bottom: 1px solid $color1;
+				.tab-list {
+					&__btn--archive.border {
+						border-bottom: 1px solid $color1;
+					}
+					&__btn--category.border {
+						border-bottom: 1px solid $color1;
+					}
+					&__btn--category {
+						flex-shrink: 0;
+					}
+					&__btn--category,
+					&__btn--archive {
+						max-width: 164px;
+						width: 100%;
+						position: relative;
+						padding-bottom: 32px;
+						@include flex(center, center);
+						&::after {
+							content: "";
+							width: 16px;
+							height: 8px;
+							margin-left: 8px;
+							background-image: url(../svg/news/drop-btn.svg);
+							background-repeat: no-repeat;
+							background-size: contain;
+							@include sp {
+								width: 10px;
+								height: 5px;
+							}
+						}
+						@include sp {
+							padding-bottom: 24px;
+						}
+						.drop-btn {
+							font-size: 2.4rem;
+							letter-spacing: 0.05em;
+							line-height: 1.2em;
+							color: $color1;
+							@extend .semi-title;
+							@include sp {
+								font-size: 1.6rem;
+							}
+						}
+						.drop-list {
+							width: 300px;
+							background: $color2;
+							@include absoluteCenterX;
+							border: 1px solid #eeeeee;
+							box-sizing: 1.6px 1.4px 4px 0px;
+							top: 40px;
+							li {
+								width: 100%;
+								padding: 16px 24px;
+								@include flex(start, center);
+								&:before {
+									content: "";
+									width: 8px;
+									height: 16px;
+									margin-right: 16px;
+									background-image: url(../svg/news/list-pic.svg);
+									background-repeat: no-repeat;
+									background-size: contain;
+								}
+							}
+						}
+					}
+				}
+			}
+			.news-list,
+			.category-inner,
+			.yearlist-inner {
+				padding-top: 72px;
+				@include flex(start, start, wrap);
+				@include xl {
+					@include flex(start, start);
+				}
+				article {
+					max-width: calc(100% / 3);
+					width: 100%;
+					@include sm {
+						max-width: 50%;
+					}
+					@include sp {
+						max-width: 100%;
+					}
+					.article {
+						max-width: 340px;
+						width: 100%;
+						padding-bottom: 32px;
+						@include xl {
+							max-width: 100%;
+							padding: 0 8px 24px 8px;
+						}
+						@include sm {
+							max-width: 100%;
+						}
+						@include sp {
+							padding: 0;
+							padding-bottom: 24px;
+						}
+						&-img a {
+							width: 100%;
+							width: 100%;
+							img {
+								width: 100%;
+								height: 220px;
+								object-fit: cover;
+							}
+						}
+						&-date {
+							padding: 16px 0;
+							@include flex(start, center);
+							&__time {
+								font-size: 1.2rem;
+								color: $color3;
+								@extend .text;
+								padding-right: 8px;
+							}
+							&__category {
+								width: 100px;
+								height: 24px;
+								background: $color3;
+								@include flex(center, center);
+								a {
+									color: $color2;
+									font-size: 1.2rem;
+									@extend .text;
+								}
+							}
+						}
+						&-title a {
+							@extend .text;
+							font-size: 1.6rem;
+							letter-spacing: 0.08em;
+							line-height: 1.7em;
+							color: $color1;
+							@include lines-truncate-2;
+							@include sp {
+								font-size: 1.4rem;
+							}
+						}
+					}
+					&:nth-child(2),
+					&:nth-child(5),
+					&:nth-child(8) {
+						.article {
+							margin: 0 auto;
+						}
+					}
+					&:nth-child(3n) {
+						.article {
+							margin-left: auto;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//ページネーション//
+.pagenation {
+	padding-top: 80px;
+	@include flex(center, center);
+	@include lg {
+		padding-top: 40px;
+	}
+	@include sp {
+		padding-top: 32px;
+	}
+	.page-numbers {
+		@extend .title;
+		color: $color3;
+		padding-right: 16px;
+		font-size: 1.8rem;
+		&.current {
+			color: $color1;
+		}
+	}
+	.next.page-numbers,
+	.prev.page-numbers {
+		@extend .title;
+		font-size: 1.8rem;
+		color: $color1;
+		@include flex(center, center);
+	}
+	.next.page-numbers {
+		&::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			margin-left: 24px;
+			background-image: url(../svg/news/pagination-right.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	.prev.page-numbers {
+		&::before {
+			content: "";
+			width: 10px;
+			height: 10px;
+			margin-right: 24px;
+			background-image: url(../svg/news/pagination-left.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}

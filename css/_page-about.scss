@@ -1,0 +1,31 @@
+main#about{
+  .section{
+    .section-inner{
+      padding-bottom: 80px;
+      @include lg{
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 56px;
+      }
+      @include sm{
+        padding-bottom: 32px;
+      }
+      .about-title{
+        padding-bottom: 40px;
+      }
+      .about-text{
+        p{
+          &:nth-child(1){
+            padding-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+  .benner{
+    .section-inner{
+      padding: 0;
+    }
+  }
+}

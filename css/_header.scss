@@ -1,0 +1,416 @@
+  header{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    .meun{
+      width: 100%;
+      position: fixed;
+      z-index: 5;
+      &-inner{
+        max-width: 100%;
+        width: 100%;
+        height: 164px;
+        background: $color9;
+        @include flex(center,center,0,0,1);
+        padding: 40px 0;
+        &__logo{
+          text-align: center;
+          padding-bottom: 32px;
+          img{
+            max-width: 190px;
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+        &__box{
+          max-width: 1000px;
+          width: 100%;
+          padding: 0 16px;
+          margin: 0 auto;
+          position: relative;
+          @include flex(between,center);
+          ul.meunbar{
+            max-width: 832px;
+            width: 100%;
+            margin: 0px;
+            @include flex(between,center);
+            @include lg{
+              max-width: 100%;
+              padding-right: 32px;
+            }
+            li{
+              a{
+                @extend .title;
+                font-size: 1.6rem;
+                letter-spacing: 0;
+              }
+            }
+          }
+          .meun-btn{
+            width: 80px;
+            margin: 0px;
+            @include flex(between,center);
+            ul{
+              width: 100%;
+              @include flex(between,center);
+              li{
+                a{
+                  @include flex(center,center);
+                }
+              }
+            }
+          }
+          .submeun{
+            max-width: 785px;
+            width: 100%;
+            height: 280px;
+            background: $color9;
+            opacity: 0.8;
+            @include absoluteCenterX;
+            top: 67px;
+            z-index: -1;
+            opacity: 0;
+            transition: 0.5s;
+            padding: 32px;
+            .subbox.news{
+              ul.list{
+                @include flex(between,center,wrap);
+                li{
+                  max-width: 345px;
+                  width: 100%;
+                  @include flex(between,center);
+                  margin-bottom: 24px;
+                  a{
+                    @include flex(start,center);
+                    .catch{
+                      width: 70px;
+                        height: 70px;
+                        flex-shrink: 0;
+                      img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+                    }
+                    .meun-news{
+                      padding-left: 24px;
+                      &__top{
+                        @include flex(start,center);
+                        .time{
+                          font-size: 1.2rem;
+                          letter-spacing: 0em;
+                          color: $color3;
+                        }
+                        .category{
+                          font-size: 1.0rem;
+                          margin-left: 16px;
+                          width: 76px;
+                          height: 18px;
+                          @include flex(center,center);
+                          background: $color3;
+                          color: $color2;
+                        }
+                      }
+                      &__bottom{
+                        font-size: 1.2rem;
+                        @include lines-truncate-2;
+                      }
+                    }
+                  }
+                }
+                li:last-child,
+                li:nth-child(3){
+                  margin-bottom: 0;
+                }
+              }
+            }
+            .subbox.about{
+              ul.list{
+                @include flex(between,center,wrap);
+                li{
+                  max-width: 345px;
+                  width: 100%;
+                  @include flex(between,center);
+                  margin-bottom: 24px;
+                  a{
+                    @include flex(start,center);
+                    .subabout{
+                      &-img{
+                        width: 70px;
+                        height: 70px;
+                        flex-shrink: 0;
+                      }
+                      &-inner{
+                        padding-left: 16px;
+                        .title{
+                          @extend .sab-title;
+                          font-size: 1.6rem;
+                          letter-spacing: 0.04em;
+                          padding-bottom: 8px;
+                        }
+                        p{
+                          font-size: 1.2rem;
+                          letter-spacing: 0.065em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .subbox.pick{
+              ul.list{
+                padding: 0 64px;
+                @include flex(between,center);
+                li{
+                  .box-pick{
+                    &__img{
+                      img{
+                        max-width: 160px;
+                        width: 100%;
+                      }
+                    }
+                    .title{
+                      padding-top: 12px;
+                      text-align: center;
+                      @extend .sab-title;
+                      font-size: 1.6rem;
+                      letter-spacing: 0.04em;
+                      padding-bottom: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .submeun.drop{
+            opacity: 1;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  //spmeun------------------------------------------------------------------------
+  header{
+    .meun{
+      &-inner{
+        @include sm{
+          height: 64px;
+          padding: 0;
+          position: relative;
+          @include flex(between,center);
+          flex-direction: row;
+        }
+        &__logo{
+          @include sm{
+            width: 100%;
+            padding-left: 16px;
+            padding-bottom: 0;
+            img{
+              max-width: 150px;
+            }
+          }
+        }
+        &__spmeun{
+          width: 100%;
+          position: absolute;
+          @include absoluteCenterY;
+          left: auto;
+          .meun-btn{
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: 16px;
+            &__line{
+              width: 20px;
+              height: 16px;
+              position: relative;
+              margin: 0 auto;
+              span{
+                width: 20px;
+                height: 1px;
+                display: block;
+                background: $color1;
+                @include absoluteCenterX;
+              }
+              span:first-of-type{
+                top: 0;
+                transition: 0.55s;
+              }
+              span:nth-of-type(2){
+                top: 7px;
+                transition: 0.55s;
+              }
+              span:last-of-type{
+                top: auto;
+                bottom: 0;
+                transition: 0.55s;
+              }
+            }
+            &__open{
+              padding-top: 5px;
+              opacity: 1;
+              font-size: 1.0rem;
+              @extend .title;
+              line-height: 1em;
+              color: $color1;
+              transition: 0.55s;
+            }
+            &__close{
+              opacity: 0;
+              height: 0;
+              font-size: 1.0rem;
+              @extend .title;
+              line-height: 1em;
+              color: $color1;
+              transition: 0.55s;
+            }
+          }
+          .meun-inner{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -1000px;
+            padding: 32px 16px;
+            border-top: 1px solid $color3;
+            @include flex(center,center,0,0,1);
+            background: rgba(255, 255, 255, 0.95);
+            transition: 0.55s;
+            ul{
+              width: 100%;
+              @include flex(center,center,wrap);
+              @include sp{
+                @include flex(center,center,wrap);
+              }
+              li{
+                max-width: calc((100% / 3) - 16px);
+                width: 100%;
+                padding: 0 0 16px 16px;
+                margin: 0px 8px 32px 8px;
+                border-bottom: 1px solid $color10;
+                @include sp{
+                  max-width: 50%;
+                  margin: 0;
+                  margin-bottom: 32px;
+                }
+                @include xs{
+                  padding: 0 0 8px 8px;
+                  max-width: calc((100% / 2) - 8px);
+                  margin: 0 4px 24px 4px;
+                }
+              }
+              li:nth-child(odd){
+                @include sp{
+                  max-width: calc(50% - 32px);
+                  width: 100%;
+                  margin: 0;
+                  margin-bottom: 32px;
+                  margin-right: 32px;
+                }
+                @include xs{
+                  padding: 0 0 8px 8px;
+                  max-width: calc((100% / 2) - 8px);
+                  margin: 0 4px 24px 4px;
+                }
+              }
+              li.online{
+                @include flex(start,center);
+                @include sp{
+                  padding-left: 0;
+                  @include flex(center,center);
+                  max-width: 100%;
+                  margin: 0px;
+                }
+                &::before{
+                  content: "";
+                  width: 26px;
+                  height: 18px;
+                  margin-right: 8px;
+                  background-image: url(../svg/common/header-cart.svg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
+              }
+            }
+            &__tel{
+              @include flex(center,center);
+              @include sp{
+                padding-top: 24px;
+                @include flex(center,center,0,0,1);
+              }
+              a.number{
+                border: none;
+                width: auto;
+                p{
+                  font-size: 1.8rem;
+                  color: $color1;
+                  letter-spacing: 0.13em;
+                  padding: 0;
+                  @extend .title;
+                  @include flex(center,center);
+                  i{
+                    padding-right: 8px;
+                  }
+                }
+              }
+              p{
+                padding-left: 16px;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0.07em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-visual{
+      @include sm{
+        padding-top: 64px;
+      }
+    }
+  }
+  //spmeun active-----------------------------------------------------------------
+  header{
+    .meun{
+      &-inner{
+        &__spmeun{
+          .meun-btn.active{
+            .meun-btn__line{
+              span:first-of-type{
+                top: 8px;
+                left: auto;
+                transform: rotate(45deg);
+                transition: 0.55s 0.5s;
+              }
+              span:nth-of-type(2){
+                opacity: 0;
+              }
+              span:last-of-type{
+                top: auto;
+                left: auto;
+                bottom: 7px;
+                transform:rotate(135deg);
+                transition: 0.55s 0.5s;
+              }
+            }
+            .meun-btn__open{
+              opacity: 0;
+              height: 0;
+              transition: 0.55s 0.5s;
+            }
+            .meun-btn__close{
+              opacity: 1;
+              height: auto;
+              transition: 0.55s 0.5s;
+            }
+          }
+          .meun-inner.active{
+            top: 46px;
+            transition: 0.55s 0.5s;
+          }
+        }
+      }
+    }
+  }
