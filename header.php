@@ -2,28 +2,32 @@
 // Internet Explorer で開かれた場合はedgeへ開くように通知を出す
 $edge_open = true;
 
-if ($edge_open && $_COOKIE['view_ie'] != 'on') {
+// クッキーが存在しない場合はデフォルト値を設定
+$view_ie = isset($_COOKIE['view_ie']) ? $_COOKIE['view_ie'] : '';
+
+if ($edge_open && $view_ie != 'on') {
   if (get_browser_name() == "ie") { ?>
     <script>
-    MoveCheck();
-    function MoveCheck() {
-      if( confirm("ご利用のウェブページはInternet Explorerでの表示を推奨していません。Microsoft Edgeで表示しますか？") ) {
-        var url = location.href;
-        url = "microsoft-edge:" + url;
-        window.location.href = url;
+      MoveCheck();
+
+      function MoveCheck() {
+        if (confirm("ご利用のウェブページはInternet Explorerでの表示を推奨していません。Microsoft Edgeで表示しますか？")) {
+          var url = location.href;
+          url = "microsoft-edge:" + url;
+          window.location.href = url;
+        } else {
+          alert("Internet Explorerでの表示を続行します。");
+        }
       }
-      else {
-        alert("Internet Explorerでの表示を続行します。");
-      }
-    }
     </script>
-    <?php
+<?php
     // ページ推移先で通知が出続けないようにクッキーにInternet Explorerで閲覧したフラグを残す
     // クッキーの有効時間 : 1時間
-    setcookie('view_ie','on',time()+60*60);
+    setcookie('view_ie', 'on', time() + 60 * 60);
   }
 }
 ?>
+
 <!DOCTYPE html>
 <html class="fwHtml" <?php language_attributes(); ?>>
 <head>
